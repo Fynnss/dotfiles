@@ -1,0 +1,6 @@
+require('plugins')
+require('keymaps')
+require('ui')
+require('basic')
+require('tools')
+require('lsp')
