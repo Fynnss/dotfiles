@@ -59,13 +59,21 @@ return packer.startup(function(use)
 		run = ":TSUpdate",
 	})
 
-	-- Search
 	use("kdheepak/lazygit.nvim")
-	use({
-		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
 
+    use {
+    "nvim-telescope/telescope-fzf-native.nvim", -- https://github.com/nvim-telescope/telescope-fzf-native.nvim
+    run = "make",
+  }
+  use {
+    "nvim-telescope/telescope.nvim", -- https://github.com/nvim-telescope/telescope.nvim
+    requires = {
+      "nvim-lua/plenary.nvim",
+    },
+    branch = "0.1.x",
+  }
+
+	-- Search
 	use({
 		"ojroques/nvim-lspfuzzy",
 		requires = {
@@ -74,25 +82,19 @@ return packer.startup(function(use)
 		},
 	})
 
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = "cd app && npm install",
-		setup = function()
-			vim.g.mkdp_filetypes = { "markdown" }
-		end,
-		ft = { "markdown" },
-	})
-
 	-- golang
-	use("ray-x/go.nvim")
-	use("ray-x/guihua.lua") -- recommended if need floating window support
+  use "fatih/vim-go"                        -- https://github.com/fatih/vim-go
 
+  use { "kylechui/nvim-surround", tag = "*" }  -- https://github.com/kylechui/nvim-surround
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
 	use("hrsh7th/cmp-path") -- path completions
 	use("hrsh7th/cmp-cmdline") -- cmdline completions
 	use("saadparwaiz1/cmp_luasnip") -- snippet completions
+  use "onsails/lspkind-nvim"                -- https://github.com/onsails/lspkind-nvim
+  use "quangnguyen30192/cmp-nvim-ultisnips" -- https://github.com/quangnguyen30192/cmp-nvim-ultisnips
+  use "SirVer/ultisnips"                    -- https://github.com/sirver/UltiSnips
 	use("hrsh7th/cmp-nvim-lsp")
 	use("MunifTanjim/prettier.nvim")
 
@@ -101,21 +103,21 @@ return packer.startup(function(use)
 	-- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
 	-- use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
 	-- use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
-	use({ "williamboman/mason.nvim" })
+	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
 
-	-- snippets
-	use("L3MON4D3/LuaSnip") --snippet engine
-	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
-
 	-- status line
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
-	use("akinsho/bufferline.nvim")
-	use("kyazdani42/nvim-tree.lua")
+  use "nvim-tree/nvim-web-devicons"
+  use "nvim-lualine/lualine.nvim"
+  use "romgrk/barbar.nvim"
+
+  use {
+    "nvim-tree/nvim-tree.lua",          -- https://github.com/nvim-tree/nvim-tree.lua
+    requires = {
+      "nvim-tree/nvim-web-devicons",    -- https://github.com/nvim-tree/nvim-web-devicons
+    },
+  }
 
 	-- dashboard alpha
 	use("goolord/alpha-nvim")

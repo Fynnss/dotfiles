@@ -143,4 +143,6 @@ export NVM_DIR="$HOME/.nvm"
 
 alias dm='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
+export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
