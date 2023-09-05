@@ -4,7 +4,7 @@ local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
-local buf_set_opts = vim.api.nvim_buf_set_option 
+local buf_set_opts = vim.api.nvim_buf_set_option
 local buf_keymap = vim.api.nvim_buf_set_keymap
 
 --Remap space as leader key
@@ -71,17 +71,14 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap("t", "<Esc>", "<C-\\><C-n>", term_opts)
 
 -- Telescope_setup
-keymap('n', '<leader>fb', [[<cmd>Telescope buffers show_all_buffers=true<cr>]], opts)
-keymap('n', '<C-p>', [[<cmd>Telescope find_files <cr>]], opts)
-keymap('n', '<leader>fg', [[<cmd>Telescope live_grep <cr>]], opts)
+keymap("n", "<leader>fb", [[<cmd>Telescope buffers show_all_buffers=true<cr>]], opts)
+keymap("n", "<C-p>", [[<cmd>Telescope find_files <cr>]], opts)
+keymap("n", "<leader>fg", [[<cmd>Telescope live_grep <cr>]], opts)
 -- keymap('n', '<leader>ff', [[<cmd>Telescope lsp_document_symbols default_text=:method: theme=get_ivy<cr>]], opts)
-keymap('n', '<leader>ff', [[<cmd>Telescope lsp_document_symbols<cr>]], opts)
-keymap('n', '==', [[<cmd>FormatWrite<cr>]], term_opts)
+keymap("n", "<leader>ff", [[<cmd>Telescope lsp_document_symbols<cr>]], opts)
+keymap("n", "==", [[<cmd>FormatWrite<cr>]], term_opts)
 
-
-keymap('n', '<leader>fr', [[<cmd>Telescope lsp_references theme=get_ivy<cr>]], opts)
-
+keymap("n", "<leader>fr", [[<cmd>Telescope lsp_references theme=get_ivy<cr>]], opts)
 
 -- nvim tree
-keymap('n', '<F3>', '<cmd>NvimTreeToggle<CR>', opts)
-
+keymap("n", "<F3>", "<cmd>NvimTreeToggle<CR>", opts)

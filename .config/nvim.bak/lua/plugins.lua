@@ -73,6 +73,7 @@ return packer.startup(function(use)
     branch = "0.1.x",
   }
 
+
 	-- Search
 	use({
 		"ojroques/nvim-lspfuzzy",
@@ -81,9 +82,6 @@ return packer.startup(function(use)
 			{ "junegunn/fzf.vim" }, -- to enable preview (optional)
 		},
 	})
-
-	-- golang
-  use "fatih/vim-go"                        -- https://github.com/fatih/vim-go
 
   use { "kylechui/nvim-surround", tag = "*" }  -- https://github.com/kylechui/nvim-surround
 	-- cmp plugins
