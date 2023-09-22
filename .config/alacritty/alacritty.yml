@@ -17,113 +17,90 @@ window:
 
 font:
   normal:
-    family: "JetBrainsMono Nerd Font Mono"
+    family: JetBrainsMono Nerd Font Mono
     style: Regular
   size: 12.0
-  
+
 mouse:
   hide_when_typing: true
 
 key_bindings:
   # Rename the current tmux window
-  - { key: Comma, mods: Command, chars: "\x02\x2c" }
+  - {key: Comma, mods: Command, chars: "\x02,"}
   # Select a new tmux session for the attached client interactively
-  - { key: K, mods: Command, chars: "\x02\x73" }
+  - {key: K, mods: Command, chars: "\x02s"}
   # Select window 1-9
-  - { key: Key1, mods: Command, chars: "\x02\x31" }
-  - { key: Key2, mods: Command, chars: "\x02\x32" }
-  - { key: Key3, mods: Command, chars: "\x02\x33" }
-  - { key: Key4, mods: Command, chars: "\x02\x34" }
-  - { key: Key5, mods: Command, chars: "\x02\x35" }
-  - { key: Key6, mods: Command, chars: "\x02\x36" }
-  - { key: Key7, mods: Command, chars: "\x02\x37" }
-  - { key: Key8, mods: Command, chars: "\x02\x38" }
-  - { key: Key9, mods: Command, chars: "\x02\x39" }
+  - {key: Key1, mods: Command, chars: "\x021"}
+  - {key: Key2, mods: Command, chars: "\x022"}
+  - {key: Key3, mods: Command, chars: "\x023"}
+  - {key: Key4, mods: Command, chars: "\x024"}
+  - {key: Key5, mods: Command, chars: "\x025"}
+  - {key: Key6, mods: Command, chars: "\x026"}
+  - {key: Key7, mods: Command, chars: "\x027"}
+  - {key: Key8, mods: Command, chars: "\x028"}
+  - {key: Key9, mods: Command, chars: "\x029"}
   # Switch to last tmux session
-  - { key: L, mods: Command, chars: "\x02\x4c" }
-  - { key: LBracket, mods: Command, chars: "\x02\x5b" }
+  - {key: L, mods: Command, chars: "\x02L"}
+  - {key: LBracket, mods: Command, chars: "\x02["}
   # Change to the previous tmux window
-  - { key: LBracket, mods: Command|Shift, chars: "\x02\x70" }
+  - {key: LBracket, mods: Command|Shift, chars: "\x02p"}
   # Split the current pane into two, left and right
-  - { key: D, mods: Command, chars: "\x02\x25" }
+  - {key: D, mods: Command, chars: "\x02%"}
   # Split the current pane into two, top and bottom.
-  - { key: D, mods: Command|Shift, chars: "\x02\x22" }
+  - {key: D, mods: Command|Shift, chars: "\x02\""}
   # Detach the current tmux client
-  - { key: W, mods: Command|Shift, chars: "\x02\x64" }
+  - {key: W, mods: Command|Shift, chars: "\x02d"}
   # Change to the next tmux window
-  - { key: RBracket, mods: Command|Shift, chars: "\x02\x6e" }
+  - {key: RBracket, mods: Command|Shift, chars: "\x02n"}
   # Type <escape>:w<enter> to save neovim
-  - { key: S, mods: Command, chars: "\x1b\x3a\x77\x0a" }
+  - {key: S, mods: Command, chars: "\e:w\n"}
   # Create a new tmux window
-  - { key: T, mods: Command, chars: "\x02\x63" }
+  - {key: T, mods: Command, chars: "\x02c"}
   # Break the current tmux pane out of the tmux window
-  - { key: T, mods: Command|Shift, chars: "\x02\x21" }
+  - {key: T, mods: Command|Shift, chars: "\x02!"}
   # Kill the current tmux pane (and window if last pane)
-  - { key: X, mods: Command, chars: "\x02\x78" }
+  - {key: X, mods: Command, chars: "\x02x"}
   # Toggle the zoom state of the current tmux pane
-  - { key: Z, mods: Command, chars: "\x02\x7a" }
-
+  - {key: Z, mods: Command, chars: "\x02z"}
 colors:
+  # COLORSCHEME: one_dark.yaml
   # Default colors
   primary:
     background: '0x1e2127'
     foreground: '0xabb2bf'
 
-    # Bright and dim foreground colors
-    #
-    # The dimmed foreground color is calculated automatically if it is not present.
-    # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-    # is `false`, the normal foreground color will be used.
-    #dim_foreground: '0x9a9a9a'
-    bright_foreground: '0xe6efff'
-
-  # Cursor colors
-  #
-  # Colors which should be used to draw the terminal cursor. If these are unset,
-  # the cursor color will be the inverse of the cell color.
-  #cursor:
-  #  text: '0x000000'
-  #  cursor: '0xffffff'
-
   # Normal colors
   normal:
-    black:   '0x1e2127'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
+    black: '0x1e2127'
+    red: '0xe06c75'
+    green: '0x98c379'
+    yellow: '0xd19a66'
+    blue: '0x61afef'
     magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0x828791'
+    cyan: '0x56b6c2'
+    white: '0xabb2bf'
 
   # Bright colors
   bright:
-    black:   '0x5c6370'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
+    black: '0x5c6370'
+    red: '0xe06c75'
+    green: '0x98c379'
+    yellow: '0xd19a66'
+    blue: '0x61afef'
     magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0xe6efff'
+    cyan: '0x56b6c2'
+    white: '0xffffff'
+  cursor:
+    text: '0x1d1f21'
+    cursor: '0xffffff'
 
-  # Dim colors
-  #
-  # If the dim colors are not set, they will be calculated automatically based
-  # on the `normal` colors.
+  # Normal colors
   dim:
-    black:   '0x1e2127'
-    red:     '0xe06c75'
-    green:   '0x98c379'
-    yellow:  '0xd19a66'
-    blue:    '0x61afef'
-    magenta: '0xc678dd'
-    cyan:    '0x56b6c2'
-    white:   '0x828791'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #indexed_colors:
-  #  - { index: 16, color: '0x000000' }
+    black: '0x000000'
+    red: '0xa90000'
+    green: '0x049f2b'
+    yellow: '0xa3b106'
+    blue: '0x530aba'
+    magenta: '0xbb006b'
+    cyan: '0x433364'
+    white: '0x5f5f5f'

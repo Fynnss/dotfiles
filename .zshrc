@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 export HOMEBREW_NO_AUTO_UPDATE=true
-export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/fynn/.cargo/bin:/Users/fynn/go/bin
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/fynn/.cargo/bin:/Users/fynn/go/bin:/Users/fynn/Library/Python/3.11/bin/
 
 # add go private repo for bnb-chain/inscription-cosmos-sdk
 # fatal: could not read Username for 'https://github.com': terminal prompts disabled
@@ -124,16 +124,5 @@ alias ....="cd ../../.."
 
 alias gcz="git cz"
 
-alias docker-up="colima start docker"
-alias docker-down="colima stop docker"
-
 alias vi="nvim"
 alias vim="nvim"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-alias dm='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-
-# export https_proxy=http://127.0.0.1:7890 http_proxy=http://127.0.0.1:7890 all_proxy=socks5://127.0.0.1:7890
